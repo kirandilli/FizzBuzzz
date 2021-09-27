@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2/Qk3zVOTW04x9aeY7FlY//U4Ef8DwFPustLb8+AkyD5OPTSppybR44t21hBHJfdOPnPispR5xtJLNoOUEmtQw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\chait\\source\\repos\\FizzBuzz\\FizzBuzz\\FizzBuzz.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\chait\\.nuget\\packages\\jquery\\3.6.0\\jquery.3.6.0.nupkg.sha512",
+    "C:\\Users\\chait\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}

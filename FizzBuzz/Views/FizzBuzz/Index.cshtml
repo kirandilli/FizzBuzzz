@@ -1,0 +1,60 @@
+﻿@model FizzBuzz.Models.FizzBuzzModel
+@{ 
+    ViewBag.Title = "FizzBuzz";
+}
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" lang="js">
+        $(document).ready(function () {
+            $("#InputList").change(function () {
+                var Text = document.getElementById('InputList').value;
+                $.ajax({
+                    Type: "GET",
+                    contentType: "application/json;charset=utf-8",
+                    url: '@Url.Action("FizzBuzz","FizzBuzz")',
+                    data: { inputList: Text },
+                    dataType: 'json',
+                    async: false,
+                    success: function (data) {
+                        debugger;
+                        $('#OutputList').empty().append("" + data);
+                        $('#OutputList').css("rows:20");
+                    },
+                    error: function () {
+                        alert("Error Occured preparing outputlist");
+                    }
+                });
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h2>FizzBuzz</h2>
+    <table style="width:100%">
+        <tr>
+            <td>
+                @Html.Label("Input List")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.TextBoxFor(m => m.InputList, new {style = "width:250px"})
+            </td>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <tr>
+            <td>
+                @Html.Label("Output List")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.TextAreaFor(m => m.OutputList,new { style="height:600px;width:250px"})
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
